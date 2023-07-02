@@ -1,0 +1,126 @@
+*{
+    font-family: 'Poppins';
+}
+body{
+    margin: 0px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+}
+.todo{
+    background-color: whitesmoke;
+    max-width: 500px;
+    padding: 30px;
+    margin:100px auto 20px;
+    border-radius: 5px;
+}
+.row{
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgb(184, 180, 180);
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-weight: 600;
+}
+input::placeholder{
+    color: black;
+    font-weight: 600;
+    opacity: 0.8;
+}
+button{
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(86, 175, 191);
+}
+.editbtn{
+    background: linear-gradient(135deg,#acadaf,#5246c1);
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.deletebtn{
+    background: linear-gradient(135deg,#a7a4a9,#5e44d4);
+    padding: 3px 1px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+button:active{
+    opacity: 0.5;
+}
+ul{
+    display: grid;
+    grid-template-columns: 0.5fr 6fr;
+    grid-auto-rows: 70px;
+    align-items: center;
+    width: 100%;
+    padding-inline-start: 0;
+}
+li{
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr;
+    list-style: none;
+    align-items: center;
+}
+li h4{
+    text-align: justify;
+}
+input[type=checkbox]{
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+/* ul input[type=checkbox]:checked{
+    pointer-events: none;
+} */
+ul input[type=checkbox]:checked + li h4{
+    text-decoration: line-through;
+}
+ul input[type=checkbox]:checked + li .editbtn{
+    visibility: hidden;
+}
+@media(max-width:480px){
+    .todo{
+        width: 80%;
+        padding: 20px;
+    }
+    .row{
+        width: 55%;
+        padding-right: 100px;
+    }
+    #add{
+        position: relative;
+        right: 50px;
+        font-size: 14px;    
+        padding: 7px 15px;
+        justify-content: fle;
+    }
+    input{
+        padding: 5px;
+        padding-right:10px ;
+    }
+    #inptext{
+        padding-right: 10px;
+    }
+    h4{
+        font-size: 12px;
+    }
+    .editbtn{
+        padding: 3px 5px;
+    }
+}
